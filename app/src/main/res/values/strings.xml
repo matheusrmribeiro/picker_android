@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Picker</string>
+    <string name="home_live_picker">Open \nLive Picker</string>
+
+    <!-- Live Picker -->
+    <string name="live_picker_save">Salvar</string>
+</resources>

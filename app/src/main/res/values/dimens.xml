@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pageMargin">5dp</dimen>
+    <dimen name="offset">10dp</dimen>
+    <dimen name="pageMarginAndOffset">15dp</dimen>
+
+    <dimen name="spacing_xsmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+    <dimen name="spacing_xxlarge">56dp</dimen>
+
+    <!-- View margins -->
+    <dimen name="view_margin_small">8dp</dimen>
+    <dimen name="view_margin">16dp</dimen>
+    <dimen name="view_margin_large">24dp</dimen>
+    <dimen name="view_margin_horizontal">16dp</dimen>
+    <dimen name="view_margin_horizontal_large">32dp</dimen>
+    <dimen name="view_margin_vertical_large">32dp</dimen>
+    <dimen name="view_margin_vertical">16dp</dimen>
+    <dimen name="view_margin_vertical_small">12dp</dimen>
+    <dimen name="view_margin_vertical_xsmall">8dp</dimen>
+    <dimen name="scroll_view_bottom_margin">76dp</dimen>
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="padding_internal_main_activity">56dp</dimen>
+    <dimen name="view_margin_safearea_bottom">70dp</dimen>
+    <dimen name="view_margin_safearea_bottom_small">60dp</dimen>
+    <dimen name="view_margin_safearea_top">70dp</dimen>
+
+    <dimen name="textsize_cell_title">@dimen/textsize_medium</dimen>
+    <dimen name="textsize_cell_subtitle">@dimen/textsize_small</dimen>
+
+    <dimen name="textsize_largexxl">24sp</dimen>
+    <dimen name="textsize_largexxxl">28sp</dimen>
+    <dimen name="textsize_largexl">22sp</dimen>
+    <dimen name="textsize_large">18sp</dimen>
+    <dimen name="textsize_medium">16sp</dimen>
+    <dimen name="textsize_small">14sp</dimen>
+    <dimen name="textsize_msmall">12sp</dimen>
+    <dimen name="textsize_xsmall">11sp</dimen>
+    <dimen name="textsize_xxsmall">10sp</dimen>
+    <dimen name="textsize_xxxsmall">8sp</dimen>
+    <dimen name="textsize_normal">20sp</dimen>
+    <dimen name="textsize_largexxxx">48sp</dimen>
+
+    <!-- Live picker -->
+    <dimen name="circle_stroke">3dp</dimen>
+    <dimen name="circle_small">10dp</dimen>
+    <dimen name="circle_xsmall">2dp</dimen>
+    <dimen name="circle_big">100dp</dimen>
+
+</resources>
