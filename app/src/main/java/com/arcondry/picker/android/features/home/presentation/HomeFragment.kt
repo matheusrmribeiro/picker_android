@@ -13,7 +13,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun setupFragment() {
         binding.btnOpenLivePicker.setOnClickListener {
-            val direction = HomeFragmentDirections.actionHomeFragment2ToHomeFragment()
+            val direction = HomeFragmentDirections.actionHomeFragmentToLivePickerFragment()
             findNavController().navigate(direction)
         }
     }

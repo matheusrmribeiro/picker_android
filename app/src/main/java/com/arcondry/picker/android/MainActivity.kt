@@ -22,5 +22,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             fallbackOnNavigateUpListener = ::onSupportNavigateUp
         )
         binding.toolbar.setupWithNavController(navigator, appBarConfiguration)
+        setSupportActionBar(binding.toolbar)
     }
 }

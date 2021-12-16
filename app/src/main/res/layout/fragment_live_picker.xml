@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.arcondry.picker.android.core.uicomponents.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.camera.view.PreviewView
         android:id="@+id/preview_view"
         android:layout_width="match_parent"
@@ -13,82 +22,90 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutDescription="@xml/fragment_live_picker_scene"
-        tools:context=".features.livepicker.presentation.LivePickerFragment">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/preview_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutDescription="@xml/fragment_live_picker_scene"
+            tools:context=".features.livepicker.presentation.LivePickerFragment">
+
+            <ImageView
+                android:id="@+id/img_center"
+                android:layout_width="@dimen/circle_small"
+                android:layout_height="@dimen/circle_small"
+                android:src="@drawable/ic_circle_stroke"
+                app:layout_constraintBottom_toBottomOf="@+id/img_static"
+                app:layout_constraintEnd_toEndOf="@+id/img_static"
+                app:layout_constraintStart_toStartOf="@+id/img_static"
+                app:layout_constraintTop_toTopOf="@+id/img_static"
+                tools:ignore="ContentDescription"
+                tools:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_static"
+                android:layout_width="@dimen/circle_small"
+                android:layout_height="@dimen/circle_small"
+                android:src="@drawable/ic_circle_stroke"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35"
+                tools:ignore="ContentDescription"
+                tools:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_static_inner"
+                android:layout_width="@dimen/circle_xsmall"
+                android:layout_height="@dimen/circle_xsmall"
+                android:src="@drawable/ic_circle_fill"
+                app:layout_constraintBottom_toBottomOf="@+id/img_static"
+                app:layout_constraintEnd_toEndOf="@+id/img_static"
+                app:layout_constraintStart_toStartOf="@+id/img_static"
+                app:layout_constraintTop_toTopOf="@+id/img_static"
+                tools:ignore="ContentDescription"
+                tools:tint="@color/white" />
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
 
         <ImageView
-            android:id="@+id/img_center"
-            android:layout_width="@dimen/circle_small"
-            android:layout_height="@dimen/circle_small"
-            android:src="@drawable/ic_circle_stroke"
-            app:layout_constraintBottom_toBottomOf="@+id/img_static"
-            app:layout_constraintEnd_toEndOf="@+id/img_static"
-            app:layout_constraintStart_toStartOf="@+id/img_static"
-            app:layout_constraintTop_toTopOf="@+id/img_static"
-            tools:ignore="ContentDescription"
-            tools:tint="@color/white" />
-
-        <ImageView
-            android:id="@+id/img_static"
-            android:layout_width="@dimen/circle_small"
-            android:layout_height="@dimen/circle_small"
-            android:src="@drawable/ic_circle_stroke"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/img_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/view_margin_large"
+            android:layout_marginTop="@dimen/view_margin"
+            android:src="@drawable/rectangle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35"
-            tools:ignore="ContentDescription"
-            tools:tint="@color/white" />
+            tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:id="@+id/img_static_inner"
-            android:layout_width="@dimen/circle_xsmall"
-            android:layout_height="@dimen/circle_xsmall"
-            android:src="@drawable/ic_circle_fill"
-            app:layout_constraintBottom_toBottomOf="@+id/img_static"
-            app:layout_constraintEnd_toEndOf="@+id/img_static"
-            app:layout_constraintStart_toStartOf="@+id/img_static"
-            app:layout_constraintTop_toTopOf="@+id/img_static"
-            tools:ignore="ContentDescription"
-            tools:tint="@color/white" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_margin"
+            android:layout_marginEnd="@dimen/view_margin_large"
+            android:text="@string/live_picker_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/view_margin_large"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="#4DFFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <ImageView
-        android:id="@+id/img_color"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="@dimen/view_margin_large"
-        android:layout_marginTop="@dimen/view_margin"
-        android:src="@drawable/rectangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/view_margin"
-        android:layout_marginEnd="@dimen/view_margin_large"
-        android:text="@string/live_picker_save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_margin="@dimen/view_margin_large"
-        android:background="@drawable/rectangle"
-        android:backgroundTint="#4DFFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,14 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toolbar
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.allViews
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import com.arcondry.picker.android.R
+import com.arcondry.picker.android.core.uicomponents.CustomToolbar
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 	private var _binding: VB? = null
@@ -30,6 +34,9 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 		setupFragment()
+		activity?.findViewById<androidx.appcompat.widget.Toolbar>(R.id.custom_toolbar)?.setNavigationOnClickListener {
+			findNavController().navigateUp()
+		}
 	}
 
 	fun showToolbar() {
