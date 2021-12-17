@@ -13,6 +13,8 @@
 
     <!-- View margins -->
     <dimen name="view_margin_small">8dp</dimen>
+    <dimen name="view_margin_xsmall">4dp</dimen>
+    <dimen name="view_margin_xxsmall">2dp</dimen>
     <dimen name="view_margin">16dp</dimen>
     <dimen name="view_margin_large">24dp</dimen>
     <dimen name="view_margin_horizontal">16dp</dimen>

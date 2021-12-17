@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.arcondry.picker.android"
-        minSdk 21
+        minSdk 23
         targetSdk 30
         versionCode 1
         versionName "1.0"
@@ -92,6 +92,7 @@ dependencies {
 
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.e-nicolas:GenericAdapter:v1.0.9'
 
     // Coil
     implementation "io.coil-kt:coil:$coil_version"
