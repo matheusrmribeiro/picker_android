@@ -1,2 +1,5 @@
-# picker_android
-Developed in Kotlin
+# Color Picker - Android Version
+
+Developed with Kotlin
+
+~~ Under development
